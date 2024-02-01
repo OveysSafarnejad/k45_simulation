@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: s3cr3t
+      POSTGRES_DB: car_prices
+    ports:
+      - "5460:5460"
+    command: -p 5460
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+      - ../shared/output:/shared/output

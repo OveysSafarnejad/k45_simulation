@@ -1,0 +1,2 @@
+apache-airflow-providers-apache-kafka
+apache-airflow-providers-postgres
